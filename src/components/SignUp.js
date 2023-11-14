@@ -61,7 +61,7 @@ import { useState } from "react";
             //old code
             try {
                 //console.log({...contactInfo});
-                const response = await axios.post('http://localhost:3002/signup',{...signUpObj});
+                const response = await axios.post(process.env.REACT_APP_BACKEND_URL+'signup',{...signUpObj});
                 console.log(response);
                 let data = response.data;
                 console.log(data);        
